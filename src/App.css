@@ -1,0 +1,25 @@
+body{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  background: #F2F2F2;
+  position: relative;
+}
+
+.main-Wrapper{
+  display:flex;
+  justify-content: space-around;
+  
+}
+button{
+  cursor:pointer;
+}
+
+@media screen and (max-width: 750px) {
+  .main-Wrapper{
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20%;
+  }
+  
+}

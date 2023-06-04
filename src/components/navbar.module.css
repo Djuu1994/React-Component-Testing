@@ -1,0 +1,230 @@
+.headerWrapper{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    position: relative;
+    align-items: center;
+    height:150px;
+    background-color: #F2F2F2;
+  }
+  
+.categoryTitle{
+    color: #1D2026;
+}
+.cartNimage{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap:10%;
+  margin-right:10%;
+  position: relative;
+}
+.navItems{
+    position: relative;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap:5%;
+    line-height: 26px;
+    color: #69707D;
+}
+.navItems li{
+    font-family: 'Kumbh Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+  }
+
+.oval{
+    width: 50px;
+    height: 50px;
+}
+
+.rectangle{
+  position: absolute;
+  width: 90%;
+  height: 1px;
+  left: 5%;
+  top: 112px;
+}
+.meny:hover{
+  color: black;
+}
+.cartButton{
+    width: 21.82px;
+    height: 20px;
+    border:0px;
+    display:flex;
+}
+
+.cartBox{
+  background: #FFFFFF;
+  box-shadow: 0px 20px 50px -20px rgba(29, 32, 38, 0.503143);
+  border-radius: 10px;
+  width:360px;
+  height:256px;
+  position: absolute;
+  right:15px;
+  top:70px;
+  z-index:1;
+}
+.cartTitleWrapper{
+  width:100%;
+  height:25%;
+  border-bottom: 1px solid #E4E9F2;
+  display:flex;
+  background: linear-gradient(0deg, #FFFFFF , #F2F2F2 60%);
+  flex-direction: column;
+}
+.cartTitle{
+  font-family: 'Kumbh Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;  
+  margin-left:20px;
+  display:block
+}
+.cartContentWrapper{
+  display:grid;
+  grid-template-areas: 
+  "img title title title title"
+  "img price amount fullprice path"
+  "checkout checkout checkout checkout checkout"
+}
+
+.cartImg{
+  grid-area:img;
+  border-radius: 4px;
+  margin: 10px 0 0 15px
+}
+.cartContentTitle{
+  margin-top:10px;
+  font-family: 'Kumbh Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #69707D;
+  grid-area: title;
+}
+.path{
+  grid-area:path;
+  height:14px;
+  width:16px;
+  border: 0px;
+  background-color: white;
+}
+.cart{
+  display: flex;
+}
+.cartInfo{ 
+  font-family: 'Kumbh Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;  
+}
+.cartInfoMainPrice{
+  font-family: 'Kumbh Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #69707D;
+  grid-area: price;
+}
+
+.cartIconNum{
+  background: #FF7E1B;
+  border-radius: 6.5px;
+  width:19px;
+  height:13px;
+  display: flex;
+  justify-content: center;
+}
+.itemNum{
+  font-family: 'Kumbh Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #1D2026; 
+}
+.cartIconText{
+  font-family: 'Kumbh Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 12px;
+  color:white;
+}
+.checkoutBtn{
+  background: #FF7E1B;
+  border-radius: 10px;
+  grid-area:checkout;
+  width:335px;
+  height:56px;
+  border:none;
+  justify-self: center;
+  margin-top:30px;
+  
+}
+.checkoutBtnText{
+  font-family: 'Kumbh Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;  
+  color:white;
+}
+.emptyCart{
+  display:flex;
+  justify-content: center;
+  margin-top:60px;
+}
+.emptyCartText{
+  font-family: 'Kumbh Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  color: #69707D;
+}
+.mobileMeny{
+  display:none;
+}
+@media screen and (max-width: 600px) {
+  .checkoutBtn{
+    position: absolute;
+    width:80%;
+    top:140px;
+    left:10%;
+    bottom: 5%;
+  }
+  .meny{
+    display:none;
+  }
+  .mobileMeny{
+    display:block
+  }
+ 
+  .cartBox {
+    width:90vw;
+    position: absolute;
+    right:0;
+  }
+  .cartContentWrapper{
+    display:grid;
+    grid-template-areas: 
+    "img title title title title"
+    "img price amount fullprice path"
+    "checkout checkout checkout checkout checkout"
+  }
+  .cart-and-image{
+    gap:15%;
+  }
+}
